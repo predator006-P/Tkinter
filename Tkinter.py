@@ -2,9 +2,11 @@ from tkinter import *
 
 root = Tk()
 
-#Creating a Label Widget
-myLabel1 = Label(root, text = "Hello World!").grid(row = 1, column = 0)
-myLabel2 = Label(root, text = "Bullshit").grid(row = 1, column = 2)
+def myClick():
+    myLable = Label(root, text="Clicked")
+    myLable.pack()
 
+myButton = Button(root, text ="Click me!", pady=50, padx = 100, command=myClick, fg="red")
+myButton.pack()
 
 root.mainloop()
